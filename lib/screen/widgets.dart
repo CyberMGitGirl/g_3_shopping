@@ -7,7 +7,7 @@ import 'package:g_3_shopping/screen/item_model.dart';
 class ItemWidget extends StatelessWidget {
   const ItemWidget({
     super.key,
-    required this.item,
+    required this.item, required bool isCartItem,
   });
 
 final Item item;
