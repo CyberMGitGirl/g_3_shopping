@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:g_3_shopping/constants.dart';
 import 'package:g_3_shopping/screen/cart_screen.dart';
+import 'package:g_3_shopping/screen/widgets.dart';
 
 class CatalogScreen extends StatelessWidget {
   const CatalogScreen({super.key});
@@ -24,21 +25,9 @@ class CatalogScreen extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemBuilder: (context, index) => ListTile(
-          leading: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(color: primaryColor),
-          ),
-          title: Text('Bag'),
-          subtitle: Text('10\$'),
-          trailing: ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: primaryColor),
-            onPressed: () {},
-            child: Text('Add'),
-          ),
-        ),
+        itemBuilder: (context, index) => ItemWidget(),
       ),
     );
   }
 }
+
