@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:g_3_shopping/constants.dart';
 import 'package:g_3_shopping/screen/cart_provider.dart';
-import 'package:g_3_shopping/screen/item_model.dart';
+
 import 'package:g_3_shopping/screen/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -11,11 +11,11 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cart'),
-        centerTitle: true,
-        backgroundColor: primaryColor),
-      body: Consumer<CartProvider>(
+        appBar: AppBar(
+            title: const Text("Cart"),
+            centerTitle: true,
+            backgroundColor: primaryColor),
+        body: Consumer<CartProvider>(
           builder: (context, provider, child) => Column(
             children: [
               Expanded(
@@ -26,6 +26,7 @@ class CartScreen extends StatelessWidget {
                     item: provider.cartItems[index],
                   ),
                 ),
+
               ),
               const SizedBox(
                 height: 20,
